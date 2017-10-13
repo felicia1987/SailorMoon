@@ -1,0 +1,73 @@
+/* webcoder assignment CSS */
+
+/*  ----- HTML Body Styles -----  */
+body {
+  position: relative;
+  margin: 0;
+  /* padding-bottom: 6rem; */
+  min-height: 100%;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  /* Padding for top navbar fixed  */
+  padding-top: 70px; 
+}
+html {
+  height: 100%;
+  box-sizing: border-box;
+}
+
+/* Responsive typography */
+html {
+    font-size: 14px;
+  }
+  
+  @include media-breakpoint-up(sm) {
+    html {
+      font-size: 16px;
+    }
+  }
+  
+  @include media-breakpoint-up(md) {
+    html {
+      font-size: 20px;
+    }
+  }
+  
+  @include media-breakpoint-up(lg) {
+    html {
+      font-size: 28px;
+    }
+  }
+
+/* Box-sizing */
+.selector-for-some-widget {
+    box-sizing: content-box;
+}
+
+/* LAYOUT - Responsive breakpoints */
+/* // Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575px) {  
+
+}
+
+/* // Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767px) {  
+
+}
+
+/* // Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991px) {  
+
+}
+
+/* // Large devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199px) {  
+    
+}
+
+/* // Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {  
+
+}
+
+/* GRID -  */
+
