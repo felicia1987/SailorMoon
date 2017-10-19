@@ -37,7 +37,7 @@
                         }                        
                     }
                     else {
-                        $(this).prop('disabled', false);        //Enable the button // Set the button to disabled again since form will be empty
+                        $(this).prop('disabled', true);     // Set the button to disabled again since form will be empty
                     }
                 });
 
@@ -64,5 +64,8 @@
         $('#close-id').click(function(){
             // hide the alert panel by changing the class
             $('#alert-id').removeClass("show").addClass("in");
+
+            // enable the form
+            $('form :input').prop('disabled', false);  
         });
     
