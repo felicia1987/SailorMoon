@@ -1,7 +1,7 @@
 /* webcoder assignment JavaScript */
 
- // on submitting the form
-$('form').submit(function (event) {
+        // on submitting the form
+        $('form').submit(function (event) {
             
             // prevent the default action of reloading the page
             event.preventDefault();
@@ -28,23 +28,41 @@ $('form').submit(function (event) {
     
             posting.done(function (response) {
                 console.log(response);
-                alert('Thank you for your question or feedback!');   
-             
+
                 $('form :input').each(function(){
                     
                     if ($(this).prop('type') != 'submit') {  // Clear the value of all input elements EXCEPT submit button!
                         if($(this).prop('type') != 'radio'){
                             $(this).val('');
-                        }    
+                        }                        
                     }
                     else {
-                        $(this).prop('disabled', false);        // Set the button to disabled again since form will be empty
+                        $(this).prop('disabled', false);        //Enable the button // Set the button to disabled again since form will be empty
                     }
                 });
+
+                $('#alert-id').removeClass("in").addClass("show");
+        
             });
             posting.fail(function (response) {
                 console.log(response);
-                alert('Error. Please resubmit your request. Sorry for the inconvenience caused.');
             });
         });
-        
+    
+    // RESPONSE ALERT WINDOW-------------------------------------------------------------------------------
+    /* include the following HTML to use:
+    <div class="form-group">
+        <button type="submit" class="btn btn-default my-btn form-control" id="submit-id">submit</button>                   
+        <div class="alert alert-danger alert-dismissible fade in" hidden id="alert-id">
+            <button type="button" class="close" id="close-id"><span>&times;</span></button>
+            Thank you! We will send you update whenever it's available.
+        </div>
+    </div>
+    */
+    
+        // on clicking the X button
+        $('#close-id').click(function(){
+            // hide the alert panel by changing the class
+            $('#alert-id').removeClass("show").addClass("in");
+        });
+    
