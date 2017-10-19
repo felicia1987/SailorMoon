@@ -33,10 +33,12 @@ $('form').submit(function (event) {
                 $('form :input').each(function(){
                     
                     if ($(this).prop('type') != 'submit') {  // Clear the value of all input elements EXCEPT submit button!
-                        $(this).val('');
+                        if($(this).prop('type') != 'radio'){
+                            $(this).val('');
+                        }    
                     }
                     else {
-                        $(this).prop('disabled', true);        // Set the button to disabled again since form will be empty
+                        $(this).prop('disabled', false);        // Set the button to disabled again since form will be empty
                     }
                 });
             });
