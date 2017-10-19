@@ -28,19 +28,21 @@ $('form').submit(function (event) {
     
             posting.done(function (response) {
                 console.log(response);
-                
-                if($('#alert-id').length > 0){
-                    $('#alert-id').prop('hidden', false);
-                } else {
-                    $('form').append('<p>Thank you</p>')
-                }
-                
+                alert('Thank you for your question or feedback!');   
+             
                 $('form :input').each(function(){
-                    $(this).val('');
-                })
+                    
+                    if ($(this).prop('type') != 'submit') {  // Clear the value of all input elements EXCEPT submit button!
+                        $(this).val('');
+                    }
+                    else {
+                        $(this).prop('disabled', true);        // Set the button to disabled again since form will be empty
+                    }
+                });
             });
             posting.fail(function (response) {
                 console.log(response);
+                alert('Error. Please resubmit your request. Sorry for the inconvenience caused.');
             });
         });
         
