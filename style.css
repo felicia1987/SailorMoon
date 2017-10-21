@@ -2,7 +2,6 @@
 /* ------------------------------------------------------------------------------
 	Typography
 -------------------------------------------------------------------------------*/
-
 @import url(http://fonts.googleapis.com/css?family=Open%20Sans:300,400,500,600,700);
 @import url(http://fonts.googleapis.com/css?family=Merriweather:300,400,500,600,700);
 p {
@@ -93,12 +92,44 @@ ul li {
 /* ------------------------------------------------------------------------------
 	Header
 -------------------------------------------------------------------------------*/
+#header {
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+}
 
 .navbar-default {
-	background-color: #fff;
+	/* margin: 0 auto; */
+	margin-top: 0;
+	margin-bottom: 0;
+	margin-left: 5%;
+	margin-right: 5%;
 	border-bottom: 0;
-	padding: 25px 0;
-	color: black;
+	padding: 60px 0px;
+	max-width: 1170px;
+	width: 100%;
+	-moz-transition: padding 0.3s;
+    -o-transition: padding 0.3s;
+    -webkit-transition: padding 0.3s;
+    transition: padding 0.3s;
+}
+
+.navbar-brand {
+    float: left;
+}
+
+#header.modifyTemp {
+    background-color: #fff;
+}
+.navbar-default.modifyTemp {
+    background-color: #fff;
+}
+.navbar-default.modifyTemp a {
+    color: #000;
+}
+.navbar-default.modifyTemp {
+    border-bottom: 0;
+    padding: 25px 0;
 }
 
 .navbar-default.open {
@@ -109,7 +140,8 @@ ul li {
 	-webkit-transition: opacity 0.5s;
 	transition: opacity 0.5s;
 }
-.navbar-text {
+
+.navbar-text a {
 	float: right;
 	color: rgba(255, 255, 255, 0.75);
 	font-size: 13px;
@@ -121,6 +153,7 @@ ul li {
 .navbar-text a:hover, .navbar-text a.active {
 	color: #fff;
 }
+
 
 /* ------------------------------------------------------------------------------
 	Banner
@@ -142,7 +175,7 @@ ul li {
 }
 
 .jumbotron-text {
-	padding-top: 22%;
+	padding-top: 10%;
 }
 .jumbotron-text h1 {
 	color: #fff;
@@ -174,6 +207,8 @@ ul li {
 	font-family: "Merriweather", Arial, sans-serif;
 	color: rgba(255, 255, 255, 0.75);
 	font-weight: 400;
+	margin-left: 5%;
+	margin-right: 5%;
 }
 
 /* ------------------------------------------------------------------------------
@@ -317,11 +352,11 @@ ul li {
 .footer .footer-col {
 	margin-bottom: 80px;
 }
+
 .footer h5 {
 	color: #fff;
-}
-.footer h5 {
 	margin-bottom: 20px;
+	font-size: 20px;
 }
 .footer p {
 	color: white;
@@ -330,11 +365,13 @@ ul li {
 	color: white;
 	background-color: #181818;
 }
+
 .footer tbody {
 	color: white;
 }
 .footer thead {
 	color: white;
+	font-size: 16px;
 }
 .footer a:hover {
 	color: #e84545;
@@ -348,14 +385,15 @@ ul li {
 }
 .footer .footer-share a {
 	border: none;
-	font-size: 21px;
 	color: white;
 }
+
 .footer .fa-heart {
 	color: #e84545;
-	font-size: 11px;
 	margin: 0 2px;
+	font-size: 11px;
 }
+
 
 
   @include media-breakpoint-up(sm) {

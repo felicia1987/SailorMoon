@@ -9,9 +9,6 @@
     <!-- Page tag title -->
     <title>Bishoujo Senshi Sailor Moon</title>
 
-    <!-- Customise CSS -->
-    <link rel="stylesheet" type="text/css" href="style.css">
-    
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
     
@@ -20,7 +17,16 @@
 
     <!-- Animate.css -->
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/animatecss/3.5.2/animate.min.css">
-    
+
+    <!-- Flexslider -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.6.3/flexslider.min.css">
+
+    <!-- Fancybox -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+
+    <!-- Customise CSS -->
+    <link rel="stylesheet" type="text/css" href="style.css">
+
         <!-- For development purposes Only -->
             <!-- <style type="text/css">
                 body{border: 2px solid blue;}
@@ -33,17 +39,20 @@
 </head>
 
 <body>
-    
+       
     <!-- Header -->
     <!-- Top Navigation bar -->
-    <nav class="navbar fixed-top navbar-transparent navbar-default">
-        <a class="navbar-brand">
-            <img src="SailorMoonImages/sailor_moon_logo_by_xuweisen-d7uycm5.png" height="50" alt="">
-        </a>
-        <span class="navbar-text">
-            <a class="" href="http://point.sg.ibm.com:9500/#!/welcome" target="_blank">webcoder</a>
-        </span>        
-    </nav>
+    <div id="header">
+        <!-- <nav class="navbar fixed-top navbar-transparent navbar-default"> -->
+        <nav class="navbar navbar-default">
+            <a class="navbar-brand">
+                <img src="SailorMoonImages/sailor_moon_logo_by_xuweisen-d7uycm5.png" height="60" alt="">
+            </a>
+            <span class="navbar-text">
+                <a class="" href="http://point.sg.ibm.com:9500/#!/welcome" target="_blank">webcoder</a>
+            </span>        
+        </nav>
+    </div>
                 
     <!-- Row 1: Jumbotron -->
     <div class="container-fluid banner">
@@ -398,6 +407,7 @@
                         col-sm-3
                         col-md-3
                         col-lg-3 show footer-col">
+
                 <h5>Share with Love</h5><br>
                 <ul class="list-inline text-left footer-share">
                     <li class="list-inline-item">
@@ -424,8 +434,10 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"></script>
 
-        <!-- Ajax -->
+        <!-- Ajax, Flexslider, Fancybox -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.6.3/jquery.flexslider-min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
 
         <!-- Customise JavaScript -->
         <script src="javascript.js"></script>
