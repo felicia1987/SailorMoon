@@ -69,7 +69,9 @@ a:hover, a:focus {
 body {
 	font-family: "Open Sans", Arial, sans-serif;
 	font-weight: 400;
-	color: #6c7279;
+    color: #6c7279;
+    max-width: 100%;
+    overflow-x: hidden;
 }
 ul, ol {
 	margin: 0;
@@ -99,11 +101,7 @@ ul li {
 }
 
 .navbar-default {
-	/* margin: 0 auto; */
-	margin-top: 0;
-	margin-bottom: 0;
-	margin-left: 5%;
-	margin-right: 5%;
+	margin: 0 auto;
 	border-bottom: 0;
 	padding: 60px 0px;
 	max-width: 1170px;
@@ -116,6 +114,7 @@ ul li {
 
 .navbar-brand {
     float: left;
+    margin-left: 5%;
 }
 
 #header.modifyTemp {
@@ -127,10 +126,12 @@ ul li {
 .navbar-default.modifyTemp a {
     color: #000;
 }
+
 .navbar-default.modifyTemp {
     border-bottom: 0;
     padding: 25px 0;
 }
+
 
 .navbar-default.open {
 	opacity: 0.9;
@@ -146,7 +147,7 @@ ul li {
 	color: rgba(255, 255, 255, 0.75);
 	font-size: 13px;
 	font-weight: 700;
-	margin-left: 40px;
+    margin-right: 20%;
 	text-transform: uppercase;
 }
 
@@ -453,7 +454,6 @@ ul li {
 /* // Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) and (max-width: 991px) {
 	.navbar-brand .navbar-text {
-		width: 90%;
 		padding: 40px 0;
 		position: fixed;
 		background-color: #000;
@@ -466,14 +466,14 @@ ul li {
 		opacity: 0;
 		-webkit-transition: opacity 0.5s, visibility 0s 0.5s;
 		transition: opacity 0.5s, visibility 0s 0.5s;
-	}
+    }
+    
 
 }
 
 /* // Large devices (desktops, 992px and up) */
 @media (min-width: 992px) and (max-width: 1199px) {  
-	.navbar-brand .navbar-text {
-		width: 90%;
+	.navbar-brand .navbar-text {		
 		padding: 40px 0;
 		position: fixed;
 		background-color: #000;
@@ -493,7 +493,6 @@ ul li {
 /* // Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {  
 	.navbar-brand .navbar-text {
-		width: 90%;
 		padding: 40px 0;
 		position: fixed;
 		background-color: #000;

@@ -81,3 +81,4 @@ $('#close-id').click(function(){
     // enable the form
     $('form :input').prop('disabled', false);  
 });
+
