@@ -11,9 +11,6 @@
 		}
 	});
 
-	// Fancybox
-	$('.myThumbnail-box').fancybox();
-
 
 	// Page Scroll
 	var sections = $('section')
