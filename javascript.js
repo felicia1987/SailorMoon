@@ -1,6 +1,11 @@
 /* webcoder assignment CSS */
 
-	// Header Scroll
+/////////////////////////////////////////////////////
+//
+// Navigation
+//
+//////////////////////////////////////////////////////
+	// Header Scroll - Change Navigation css setup
 	$(window).on('scroll', function() {
 		var scroll = $(window).scrollTop();
 
@@ -12,7 +17,7 @@
 	});
 
 
-	// Page Scroll
+	// Page Scroll - Navigation to each section
 	var sections = $('section')
 		nav = $('nav[role="navigation"]');
 
@@ -36,7 +41,7 @@
 	  return false;
 	});
 
-	// Mobile Navigation
+	// Mobile Navigation - Toggle Menu Section
 	$('.nav-toggle').on('click', function() {
 		$(this).toggleClass('close-nav');
 		nav.toggleClass('open');
@@ -47,7 +52,26 @@
 		nav.toggleClass('open');
 	});
 
-    // on submitting the form
+
+////////////////////////////////////////////////////////////
+//
+// Pop Up Window
+//
+////////////////////////////////////////////////////////////
+function openNav() {
+	document.getElementById("myNav").style.width = "100%";
+}
+
+function closeNav() {
+	document.getElementById("myNav").style.width = "0%";
+}
+
+
+//////////////////////////////////////////////////////////////////////
+//
+// on submitting the form
+//
+/////////////////////////////////////////////////////////////////////
 $('form').submit(function (event) {
     
 // prevent the default action of reloading the page
